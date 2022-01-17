@@ -11,25 +11,26 @@ using namespace std;
 class Solution{
     
     public:
-    vector<int> help_classmate(vector<int> A, int n) 
+    vector<int> help_classmate(vector<int> arr, int n) 
     { 
         // Your code goes here
-        int minm=INT_MAX;
-    vector<int>sol;
-    for(int i=0;i<n;i++){
-        int flag=0;
-        for(int j=i+1;j<n;j++){
-            if(A[j]<A[i]){
-                sol.push_back(A[j]);
-                flag=1;
-                break;
+        vector<int>sol;
+        stack<int>s;
+        for(int i=n-1;i>=0;i--){
+            while(!s.empty() && arr[i]<=s.top()){
+                s.pop();
+            }
+            if(!s.empty()&&s.top()<arr[i]){
+                sol.push_back(s.top());
+                s.push(arr[i]);
+            }
+            else if(s.empty()){
+                s.push(arr[i]);
+                sol.push_back(-1);
             }
         }
-        if(flag==0){
-            sol.push_back(-1);
-        }
-    }
-    return sol;
+        reverse(sol.begin(),sol.end());
+        return sol;
     } 
 };
 
