@@ -1,30 +1,35 @@
 class Solution {
 public:
-    //if we found a current character is alphabet then update that character to upper case
-//and then by backtracking we change the character to lowercase.
-//if the current charcter is number than left it as it is
-    vector<string> letterCasePermutation(string s) {
-        vector<string>ans;
-        solve(s,ans,0);
-        return ans;
-    }
-    void solve(string S, vector<string>&ans,int i) {
-        if(i == S.size()) { // base condition
-            ans.push_back(S);
+    void solve(string ip,string op,vector<string>&v){
+        if(ip.length()==0){
+            v.push_back(op);
             return;
         }
+        if(isalpha(ip[0])){
+            string op1=op;
+            string op2=op;
+            op1.push_back(toupper(ip[0]));
+            op2.push_back(tolower(ip[0]));
+            ip.erase(ip.begin()+0);
+            solve(ip,op1,v);
+            solve(ip,op2,v);
+            
+        }
+        else{
+            string op1=op;
+            op1.push_back(ip[0]);
+            ip.erase(ip.begin()+0);
+            solve(ip,op1,v);
         
-        if(S[i]>='a'&&S[i]<='z'||S[i]>='A'&&S[i]<='Z') { // if the scanned character is alphabet
-            S[i] = toupper(S[i]);
-            cout<<S<<" ";
-            solve(S,ans,i+1);
-            S[i] = tolower(S[i]);
-            cout<<S<<" ";
-            solve(S,ans,i+1);
         }
-        else { // if the scanned character is number
-            cout<<S<<" ";
-            solve(S,ans,i+1);
-        }
+            //return;
+        
+    }
+    vector<string> letterCasePermutation(string s) {
+        string ip=s;
+        string op="";
+        vector<string>v;
+        solve(ip,op,v);
+        return v;
     }
 };
