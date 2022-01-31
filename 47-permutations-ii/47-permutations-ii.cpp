@@ -1,11 +1,11 @@
 class Solution {
 public:
      vector<vector<int>> myVec;
-    
-    // Backtracking
+    set<vector<int>>s;
     void permutation(vector<int> &nums,int i,int n){
-        if(i==n){
+        if(i==n&&!s.count(nums)){
             myVec.push_back(nums);
+            s.insert(nums);
             return ;
         }
 
@@ -17,8 +17,6 @@ public:
     }
     vector<vector<int>> permuteUnique(vector<int>& nums) {
         permutation(nums,0,nums.size()-1);
-        std::sort(myVec.begin(), myVec.end());
-        myVec.erase(std::unique(myVec.begin(), myVec.end()), myVec.end());
-        return myVec;
+         return myVec;
     }
 };
