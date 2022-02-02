@@ -6,15 +6,15 @@ public:
            return res;
          for(int i = 0; i < p.size(); ++i)
         {
-            ++pv[p[i]-'a'];
-            ++sv[s[i]-'a'];
+            pv[p[i]-'a']++;
+            sv[s[i]-'a']++;
         }
         if(pv == sv)
            res.push_back(0); 
         for(int i = p.size(); i < s.size(); ++i) 
         {
-                ++sv[s[i]-'a'];
-                 --sv[s[i-p.size()]-'a']; 
+                sv[s[i]-'a']++;
+                 sv[s[i-p.size()]-'a']--; 
                 if(pv == sv) 
                     res.push_back(i-p.size()+1);
         }
