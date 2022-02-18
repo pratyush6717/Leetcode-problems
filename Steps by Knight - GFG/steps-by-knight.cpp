@@ -11,8 +11,8 @@ class Solution
 	int minStepToReachTarget(vector<int>&KnightPos,vector<int>&TargetPos,int n)
 	{
 	    // Code here
-	    int x1=KnightPos[0];
-        int y1=KnightPos[1];
+    int x1=KnightPos[0];
+    int y1=KnightPos[1];
     int x2=TargetPos[0];
     int y2=TargetPos[1];
     
@@ -36,42 +36,42 @@ class Solution
         int j=cur.second;
         q.pop();
         
-        if(i-1>=0 and j+2>=0 and i-1<n and j+2<n and a[i-1][j+2]==0)
+        if(i-1>=0 and j+2<n and a[i-1][j+2]==0)
         {
             a[i-1][j+2]=a[i][j]+1;
             q.push({i-1,j+2});
         }
-        if(i+1>=0 and j+2>=0 and i+1<n and j+2<n and a[i+1][j+2]==0)
+        if( i+1<n and j+2<n and a[i+1][j+2]==0)
         {
             a[i+1][j+2]=a[i][j]+1;
             q.push({i+1,j+2});
         }
-        if(i-1>=0 and j-2>=0 and i-1<n and j-2<n and a[i-1][j-2]==0)
+        if(i-1>=0 and j-2>=0  and a[i-1][j-2]==0)
         {
             a[i-1][j-2]=a[i][j]+1;
             q.push({i-1,j-2});
         }
-        if(i+1>=0 and j-2>=0 and i+1<n and j-2<n and a[i+1][j-2]==0)
+        if( j-2>=0 and i+1<n and a[i+1][j-2]==0)
         {
             a[i+1][j-2]=a[i][j]+1;
             q.push({i+1,j-2});
         }
-        if(i-2>=0 and j+1>=0 and i-2<n and j+1<n and a[i-2][j+1]==0)
+        if(i-2>=0 and j+1<n and a[i-2][j+1]==0)
         {
             a[i-2][j+1]=a[i][j]+1;
             q.push({i-2,j+1});
         }
-        if(i-2>=0 and j-1>=0 and i-2<n and j-1<n and a[i-2][j-1]==0)
+        if(i-2>=0 and j-1>=0 and a[i-2][j-1]==0)
         {
             a[i-2][j-1]=a[i][j]+1;
             q.push({i-2,j-1});
         }
-        if(i+2>=0 and j+1>=0 and i+2<n and j+1<n and a[i+2][j+1]==0)
+        if( i+2<n and j+1<n and a[i+2][j+1]==0)
         {
             a[i+2][j+1]=a[i][j]+1;
             q.push({i+2,j+1});
         }
-        if(i+2>=0 and j-1>=0 and i+2<n and j-1<n and a[i+2][j-1]==0)
+        if( j-1>=0 and i+2<n and a[i+2][j-1]==0)
         {
             a[i+2][j-1]=a[i][j]+1;
             q.push({i+2,j-1});
