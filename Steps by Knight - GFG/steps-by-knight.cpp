@@ -35,7 +35,8 @@ class Solution
         int i=cur.first;
         int j=cur.second;
         q.pop();
-        
+    //  dx[] = { -1, 1, 2 -2, -1, 1, 2, -2};
+    //  dy[] = {  2, 2, 1 ,-1, -2, -2, -1, 1};
         if(i-1>=0 and j+2<n and a[i-1][j+2]==0)
         {
             a[i-1][j+2]=a[i][j]+1;
