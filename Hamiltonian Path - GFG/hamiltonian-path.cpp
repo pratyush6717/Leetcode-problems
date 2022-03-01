@@ -38,8 +38,8 @@ class Solution
        
        for(int i=1;i<=N;i++)
        {
-           if(dfs(i,1,adj,N,M,visit)){
-               return true;
+           if(!visit[i]){
+               if(dfs(i,1,adj,N,M,visit))   return true;
            }
        }
      
