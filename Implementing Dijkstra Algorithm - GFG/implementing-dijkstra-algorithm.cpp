@@ -17,9 +17,9 @@ class Solution
             g[i].push_back(make_pair(it[0],it[1]));
             //cout<<it[0]<<" "<<it[1]<<endl;
         }
-        }
+    }
 	
-       priority_queue<pair<int,int>,vector<pair<int,int> >,greater<pair<int,int> > > pq;// min-heap ; In pair => (dist,from)
+       priority_queue<pair<int,int>,vector<pair<int,int> > > pq;// min-heap ; In pair => (dist,from)
 	vector<int> distTo(n+1,INT_MAX); 	// 1-indexed array for calculating shortest paths; 
 	
 	distTo[source] = 0;
