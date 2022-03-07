@@ -16,11 +16,12 @@ class Solution
         priority_queue<pair<int,int>> pq;
         pq.push({S,0});
         while(!pq.empty()){
-            pair<int,int> curNode = pq.top();pq.pop();
-            for(vector<int> &vw : adj[curNode.first]){
-                if(distance[curNode.first]+vw[1]<distance[vw[0]]){
-                    distance[vw[0]] = distance[curNode.first]+vw[1];
-                  pq.push({vw[0],-1*distance[curNode.first]+vw[1]});
+            int node=pq.top().first;
+            pq.pop();
+            for(auto vw : adj[node]){
+                if(distance[node]+vw[1]<distance[vw[0]]){
+                    distance[vw[0]] = distance[node]+vw[1];
+                  pq.push({vw[0],distance[node]+vw[1]});
                 }
             }
         }
