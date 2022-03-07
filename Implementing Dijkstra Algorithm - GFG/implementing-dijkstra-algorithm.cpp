@@ -14,29 +14,26 @@ class Solution
         vector<pair<int,int> > g[n+1];
         for(int i=0;i<n;i++){
         for(auto it: adj[i]){
-            g[i].push_back(make_pair(it[0],it[1]));
-            //cout<<it[0]<<" "<<it[1]<<endl;
+            g[i].push_back({it[0],it[1]});
         }
     }
 	
-       priority_queue<pair<int,int>,vector<pair<int,int> > > pq;// min-heap ; In pair => (dist,from)
-	vector<int> distTo(n+1,INT_MAX); 	// 1-indexed array for calculating shortest paths; 
+       priority_queue<pair<int,int>,vector<pair<int,int> > > pq;
+	vector<int> distTo(n+1,INT_MAX);  
 	
 	distTo[source] = 0;
-	pq.push(make_pair(0,source));	// (dist,from)
+	pq.push({0,source});
 	
 	while( !pq.empty() ){
 		int dist = pq.top().first;
 		int prev = pq.top().second;
 		pq.pop();
-		
-		vector<pair<int,int> >::iterator it;
-		for( it = g[prev].begin() ; it != g[prev].end() ; it++){
-			int next = it->first;
-			int nextDist = it->second;
+		for( auto it :g[prev]){
+			int next = it.first;
+			int nextDist = it.second;
 			if( distTo[next] > distTo[prev] + nextDist){
 				distTo[next] = distTo[prev] + nextDist;
-				pq.push(make_pair(distTo[next], next));
+				pq.push({distTo[next], next});
 			}
 		}
 		
