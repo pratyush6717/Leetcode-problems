@@ -25,6 +25,8 @@ public:
     }
         for(int i=1;i<=n;i++){
             for(int j=0;j<=target;j++){
+                /*Because range of the sum includes 0.
+Ex - If all the elements are 0 and we want a sum 0, for that we need j from 0. So that 0 can also be considered as sum of previous subset of i elements.*/
                 if(nums[i-1]<=j){
                     t[i][j]=t[i-1][j]+t[i-1][j-nums[i-1]];
                 }
