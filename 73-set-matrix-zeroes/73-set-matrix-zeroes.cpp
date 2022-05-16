@@ -1,6 +1,6 @@
 class Solution {
 public:
-    void update(vector<vector<int>>& matrix,int i,int j){
+   void update(vector<vector<int>>& matrix,int i,int j){
         for(int k=0;k<matrix.size();k++){
             matrix[k][j]=0;
         }
@@ -14,7 +14,7 @@ public:
         for(int i=0;i<matrix.size();i++){
             for(int j=0;j<matrix[i].size();j++){
                 if(matrix[i][j]==0){
-                    cout<<i<<' '<<j;
+                    // cout<<i<<' '<<j;
                     row.push_back(i);
                     col.push_back(j);
                 }
