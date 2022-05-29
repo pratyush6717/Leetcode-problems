@@ -9,6 +9,7 @@ using namespace std;
 // User function template for C++
 
 class Solution{
+    public:
     void solve(int i,int j,vector<vector<int>> &a,int n,vector<string>& ans,string move,vector<vector<int>>& vis){
         if(i==n-1&&j==n-1){
             ans.push_back(move);
@@ -36,7 +37,6 @@ class Solution{
         }
         
     }
-    public:
     vector<string> findPath(vector<vector<int>> &m, int n) {
         // Your code goes here
         vector<string>ans;
