@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<int> ans;
+   vector<int> ans;
     void dfs(int i,int j,vector<vector<int>> &grid,int startingIndex){
         
         if(i==grid.size()){
