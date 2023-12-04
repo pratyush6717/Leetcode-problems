@@ -23,11 +23,11 @@ public:
                     v.push_back(nums[front]);
                     v.push_back(nums[back]);
                     ans.push_back(v);
-                    while (front < back && nums[front] == v[1]) ++front;
-                    while (front < back && nums[back] == v[2]) --back;
+                    while (front < back && nums[front] == v[1]) ++front;//to avoid duplicates
+                    while (front < back && nums[back] == v[2]) --back;//to avoid duplicates
                 }
             }
-            while (i + 1 < n && nums[i + 1] == nums[i]) ++i;
+            while (i + 1 < n && nums[i + 1] == nums[i]) ++i;//to avoid duplicates
         }
         return ans;
     }
