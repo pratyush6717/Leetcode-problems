@@ -7,7 +7,7 @@ public:
             product=product*nums[i];
             maxm_product=max(product,maxm_product);
             if(product==0){
-                product=1;
+                product=1;//for in between zeroes
             }
         }
         product=1;
