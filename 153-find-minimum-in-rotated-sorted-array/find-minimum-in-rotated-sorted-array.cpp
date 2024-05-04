@@ -1,15 +1,16 @@
 class Solution {
 public:
-void pop_front(vector<int>& nums,int root){
-    nums.erase(nums.begin()+root);
-}
     int findMin(vector<int>& nums) {
-        int n=nums.size();
-        for(int i=0;i<nums.size();i++){
-            if(nums[0]>nums[n-1]){
-            int x=nums[0];
-            nums.push_back(x);
-            pop_front(nums,0);
+        int n=nums.size()-1;
+        if(nums[n]>nums[0]){
+            return nums[0];
+        }
+        else{
+            while(n>0){
+                if(nums[n-1]>nums[n]){
+                    return nums[n];
+                }
+                n--;
             }
         }
         return nums[0];
