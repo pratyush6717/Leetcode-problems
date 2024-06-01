@@ -1,36 +1,39 @@
-<h2><a href="https://leetcode.com/problems/valid-parentheses/">20. Valid Parentheses</a></h2><h3>Easy</h3><hr><div style="user-select: auto;"><p style="user-select: auto;">Given a string <code style="user-select: auto;">s</code> containing just the characters <code style="user-select: auto;">'('</code>, <code style="user-select: auto;">')'</code>, <code style="user-select: auto;">'{'</code>, <code style="user-select: auto;">'}'</code>, <code style="user-select: auto;">'['</code> and <code style="user-select: auto;">']'</code>, determine if the input string is valid.</p>
+<h2><a href="https://leetcode.com/problems/valid-parentheses">Valid Parentheses</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given a string <code>s</code> containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>
 
-<p style="user-select: auto;">An input string is valid if:</p>
+<p>An input string is valid if:</p>
 
-<ol style="user-select: auto;">
-	<li style="user-select: auto;">Open brackets must be closed by the same type of brackets.</li>
-	<li style="user-select: auto;">Open brackets must be closed in the correct order.</li>
+<ol>
+	<li>Open brackets must be closed by the same type of brackets.</li>
+	<li>Open brackets must be closed in the correct order.</li>
+	<li>Every close bracket has a corresponding open bracket of the same type.</li>
 </ol>
 
-<p style="user-select: auto;">&nbsp;</p>
-<p style="user-select: auto;"><strong style="user-select: auto;">Example 1:</strong></p>
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
 
-<pre style="user-select: auto;"><strong style="user-select: auto;">Input:</strong> s = "()"
-<strong style="user-select: auto;">Output:</strong> true
+<pre>
+<strong>Input:</strong> s = &quot;()&quot;
+<strong>Output:</strong> true
 </pre>
 
-<p style="user-select: auto;"><strong style="user-select: auto;">Example 2:</strong></p>
+<p><strong class="example">Example 2:</strong></p>
 
-<pre style="user-select: auto;"><strong style="user-select: auto;">Input:</strong> s = "()[]{}"
-<strong style="user-select: auto;">Output:</strong> true
+<pre>
+<strong>Input:</strong> s = &quot;()[]{}&quot;
+<strong>Output:</strong> true
 </pre>
 
-<p style="user-select: auto;"><strong style="user-select: auto;">Example 3:</strong></p>
+<p><strong class="example">Example 3:</strong></p>
 
-<pre style="user-select: auto;"><strong style="user-select: auto;">Input:</strong> s = "(]"
-<strong style="user-select: auto;">Output:</strong> false
+<pre>
+<strong>Input:</strong> s = &quot;(]&quot;
+<strong>Output:</strong> false
 </pre>
 
-<p style="user-select: auto;">&nbsp;</p>
-<p style="user-select: auto;"><strong style="user-select: auto;">Constraints:</strong></p>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<ul style="user-select: auto;">
-	<li style="user-select: auto;"><code style="user-select: auto;">1 &lt;= s.length &lt;= 10<sup style="user-select: auto;">4</sup></code></li>
-	<li style="user-select: auto;"><code style="user-select: auto;">s</code> consists of parentheses only <code style="user-select: auto;">'()[]{}'</code>.</li>
+<ul>
+	<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
+	<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>
 </ul>
-</div>
