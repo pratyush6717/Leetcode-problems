@@ -4,16 +4,14 @@ public:
         if(x<0){
             return false;
         }
-        long long int y=x;
-        long long int z=0;
-        while(y!=0){
-            long long int rem=y%10;
-            z=z*10+rem;
-            y=y/10;
+        vector<int>v;
+        while(x>0){
+            int rem=x%10;
+            v.push_back(rem);
+            x=x/10;
         }
-        if(z==x){
-            return true;
-        }
-        return false;
+         vector<int>v1=v;
+         reverse(v1.begin(),v1.end());
+         return(v==v1);
     }
 };
