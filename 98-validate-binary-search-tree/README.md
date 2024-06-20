@@ -1,32 +1,33 @@
-<h2><a href="https://leetcode.com/problems/validate-binary-search-tree/">98. Validate Binary Search Tree</a></h2><h3>Medium</h3><hr><div style="user-select: auto;"><p style="user-select: auto;">Given the <code style="user-select: auto;">root</code> of a binary tree, <em style="user-select: auto;">determine if it is a valid binary search tree (BST)</em>.</p>
+<h2><a href="https://leetcode.com/problems/validate-binary-search-tree">Validate Binary Search Tree</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>Given the <code>root</code> of a binary tree, <em>determine if it is a valid binary search tree (BST)</em>.</p>
 
-<p style="user-select: auto;">A <strong style="user-select: auto;">valid BST</strong> is defined as follows:</p>
+<p>A <strong>valid BST</strong> is defined as follows:</p>
 
-<ul style="user-select: auto;">
-	<li style="user-select: auto;">The left subtree of a node contains only nodes with keys <strong style="user-select: auto;">less than</strong> the node's key.</li>
-	<li style="user-select: auto;">The right subtree of a node contains only nodes with keys <strong style="user-select: auto;">greater than</strong> the node's key.</li>
-	<li style="user-select: auto;">Both the left and right subtrees must also be binary search trees.</li>
+<ul>
+	<li>The left <span data-keyword="subtree">subtree</span> of a node contains only nodes with keys <strong>less than</strong> the node&#39;s key.</li>
+	<li>The right subtree of a node contains only nodes with keys <strong>greater than</strong> the node&#39;s key.</li>
+	<li>Both the left and right subtrees must also be binary search trees.</li>
 </ul>
 
-<p style="user-select: auto;">&nbsp;</p>
-<p style="user-select: auto;"><strong style="user-select: auto;">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/12/01/tree1.jpg" style="width: 302px; height: 182px; user-select: auto;">
-<pre style="user-select: auto;"><strong style="user-select: auto;">Input:</strong> root = [2,1,3]
-<strong style="user-select: auto;">Output:</strong> true
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/12/01/tree1.jpg" style="width: 302px; height: 182px;" />
+<pre>
+<strong>Input:</strong> root = [2,1,3]
+<strong>Output:</strong> true
 </pre>
 
-<p style="user-select: auto;"><strong style="user-select: auto;">Example 2:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/12/01/tree2.jpg" style="width: 422px; height: 292px; user-select: auto;">
-<pre style="user-select: auto;"><strong style="user-select: auto;">Input:</strong> root = [5,1,4,null,null,3,6]
-<strong style="user-select: auto;">Output:</strong> false
-<strong style="user-select: auto;">Explanation:</strong> The root node's value is 5 but its right child's value is 4.
+<p><strong class="example">Example 2:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/12/01/tree2.jpg" style="width: 422px; height: 292px;" />
+<pre>
+<strong>Input:</strong> root = [5,1,4,null,null,3,6]
+<strong>Output:</strong> false
+<strong>Explanation:</strong> The root node&#39;s value is 5 but its right child&#39;s value is 4.
 </pre>
 
-<p style="user-select: auto;">&nbsp;</p>
-<p style="user-select: auto;"><strong style="user-select: auto;">Constraints:</strong></p>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<ul style="user-select: auto;">
-	<li style="user-select: auto;">The number of nodes in the tree is in the range <code style="user-select: auto;">[1, 10<sup style="user-select: auto;">4</sup>]</code>.</li>
-	<li style="user-select: auto;"><code style="user-select: auto;">-2<sup style="user-select: auto;">31</sup> &lt;= Node.val &lt;= 2<sup style="user-select: auto;">31</sup> - 1</code></li>
+<ul>
+	<li>The number of nodes in the tree is in the range <code>[1, 10<sup>4</sup>]</code>.</li>
+	<li><code>-2<sup>31</sup> &lt;= Node.val &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
-</div>
