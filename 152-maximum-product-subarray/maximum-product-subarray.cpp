@@ -1,8 +1,8 @@
 class Solution {
 public:
     int maxProduct(vector<int>& nums) {
-        int prod=1;
-        int res=INT_MIN;
+         double prod=1;
+         double res=INT_MIN;
         for(int i=0;i<nums.size();i++){
             prod=prod*nums[i];
             //prod=max(prod,nums[i]);
