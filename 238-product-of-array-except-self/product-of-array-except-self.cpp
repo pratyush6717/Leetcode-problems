@@ -3,19 +3,14 @@ public:
     vector<int> productExceptSelf(vector<int>& nums) {
         long long res=1;
         int count=0;
-        int negative=1;
         for(int i=0;i<nums.size();i++){
-            if(nums[i]<0){
-                negative=negative*(-1);
-            }
             if(nums[i]==0){
                 count++;
             }
             else{
-                res=res*abs(nums[i]);
+                res=res*nums[i];
             }
         }
-        res=res*negative;
         vector<int>ans;
         if(count==0){
         for(int i=0;i<nums.size();i++){
